@@ -1,0 +1,27 @@
+{
+  "name": "r-squared",
+  "version": "0.0.0",
+  "description": "Calculate r-squared",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balou9/r-squared.git"
+  },
+  "keywords": [
+    "r-squared",
+    "regression",
+    "linear"
+  ],
+  "author": "Emmanuel Owosekun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Balou9/r-squared/issues"
+  },
+  "homepage": "https://github.com/Balou9/r-squared#readme",
+  "dependencies": {
+    "lirm": "0.0.0"
+  }
+}
