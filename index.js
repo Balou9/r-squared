@@ -13,12 +13,32 @@ function mean (arr) {
 }
 
 function meanDist (arr) {
-  
+  return arr.map( function (i) {
+    return i - mean(arr)
+  })
 }
 
-function rSquared (arr) {
+function distSquared (arr) {
+  return arr.map( function (each)  {
+   return Math.pow(each, 2)
+  })
+}
 
+function xPlug (x, y) {
+  var result = []
+  for (var i = 0; i < x.length; i++) {
+    result.push(lirm.lirm(x, y, i) - mean(y))
+  }
+  return result
+}
+
+function rSquared (x, y) {
+  return xPlug(x, y)
 }
 
 
-module.exports = rSquared
+module.exports = {
+  distSquared,
+  xPlug,
+  rSquared
+}
