@@ -24,7 +24,7 @@ function distSquared (arr) {
   })
 }
 
-function xPlug (x, y) {
+function yHatPlug (x, y) {
   var result = []
   for (var i = 0; i < x.length; i++) {
     result.push(lirm.lirm(x, y, i) - mean(y))
@@ -32,13 +32,24 @@ function xPlug (x, y) {
   return result
 }
 
-function rSquared (x, y) {
-  return xPlug(x, y)
+function meanSquaredDistance (arr) {
+  var out = sum(distSquared(arr))
+  return out
 }
 
+function rSquared (x, y) {
+  return {
+    'estimatedMeanSquaredDistance': typeof yHatPlug(x,y)[0],
+    'actualMeanSquaredDistance': typeof meanDist(y)[0]
+  }
+}
 
 module.exports = {
+  rSquared,
+  meanSquaredDistance,
+  yHatPlug,
   distSquared,
-  xPlug,
-  rSquared
+  meanDist,
+  mean,
+  sum
 }
