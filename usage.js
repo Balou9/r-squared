@@ -5,3 +5,4 @@ var y = [2,4,5,4,5]
 
 console.log(rSquared.yPlug(y))
 console.log(rSquared.hatPlug(x,y))
+console.log(rSquared.rSquared(x,y))

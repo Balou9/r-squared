@@ -1,7 +1,7 @@
 {
   "name": "r-squared",
   "version": "0.0.0",
-  "description": "Calculate r-squared, how a well a regression line calculates values",
+  "description": "Calculate r-squared, how well a regression line calculates values",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js"

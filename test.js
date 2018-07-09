@@ -15,3 +15,8 @@ tape('yPlug', function (t) {
   t.ok(reg.yPlug(y))
   t.end()
 })
+
+tape('rSquared', function (t) {
+  t.ok(reg.rSquared(x,y))
+  t.end()
+})
