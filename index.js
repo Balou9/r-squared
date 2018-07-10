@@ -10,15 +10,15 @@ function yPlug (arr) {
 
 function hatPlug (x, y) {
   var result = []
-  for (var i = 1; i < (x.length + 1); i++){
+  for (var i = 1; i < x.length + 1; i++){
     result.push(Math.pow(lirm.lirm(x,y,i) - mean(y), 2))
   }
-  return result.reduce((acc,cur) => acc + cur, 0)
+  return result.reduce((acc,cur) => acc + cur, 0).toFixed(1)
 }
 
-function rSquared (x, y) {
-  var result = hatPlug(x, y) / yPlug(y) 
-  return result
+function rSquared (x, y, callback) {
+  if (x.length !== y.length) throw new TypeError('Unequal array length.')
+  callback(null, hatPlug(x, y) / yPlug(y))
 }
 
 module.exports = {

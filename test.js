@@ -17,6 +17,13 @@ tape('yPlug', function (t) {
 })
 
 tape('rSquared', function (t) {
-  t.ok(reg.rSquared(x,y))
+  reg.rSquared(x, y, function (err, rSquared) {
+    t.ok(rSquared === 0.6)
+  })
+  t.end()
+})
+
+tape('Unequal array length error', function (t) {
+  t.throws(reg.rSquared.bind(null, x, z))
   t.end()
 })
