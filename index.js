@@ -13,7 +13,7 @@ function hatPlug (x, y) {
   for (var i = 1; i < x.length + 1; i++){
     result.push(Math.pow(lirm.lirm(x,y,i) - mean(y), 2))
   }
-  return result.reduce((acc,cur) => acc + cur, 0).toFixed(1)
+  return Math.round(result.reduce((acc,cur) => acc + cur, 0) * 10) / 10
 }
 
 function rSquared (x, y, callback) {
