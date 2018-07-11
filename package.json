@@ -22,9 +22,7 @@
   },
   "homepage": "https://github.com/Balou9/r-squared#readme",
   "dependencies": {
-    "lirm": "0.0.1"
-  },
-  "devDependencies": {
+    "lirm": "^0.0.0",
     "tape": "^4.9.1"
   }
 }
